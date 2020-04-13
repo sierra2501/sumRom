@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/gannet.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/readExternalFile.js"></script>
+
+    <script type="text/javascript">
+        function initialize () {
+    }
+
+    function do_script () {
+
+        var py_result = document.getElementById('result')
+    
+        // 外部ファイルのPythonコードを読み込みして連結.
+        py_src = readFileToString('py/sumRom.py');
+
+        // スクリプトを実行と結果を書く.
+        py_result.innerHTML = window.external.setScript(py_src);
+    }
+    </script>
+
+</head>
+
+<body onload="initialize();">
+
+    <h3>稜線の長さの合計を求める</h3>
+    <br />
+    <div id = "sr-container">
+        <div id = "sr-left">
+            <input type="button" value="実行する" onclick="do_script();">
+        </div>
+        <div id = "sr-right">
+            <p>R = <span id = "result"></span></p>
+        </div>
+    </div>
+    
+
+</body>
+</html>

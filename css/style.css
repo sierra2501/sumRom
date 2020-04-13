@@ -1,0 +1,14 @@
+#sr-container{
+  display: flex;
+  flex-direction: row;
+}
+#sr-left{
+  width: 85px;
+}
+#sr-right{
+  flex: 1;
+  float: right;
+  height: auto;
+  padding-left: 5px;
+  border: 1px solid;
+}
