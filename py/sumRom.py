@@ -32,6 +32,7 @@ def sumRom():
 
 def main():
 
-    print "R = " + str(sumRom())
+    unit_array = ["mm", "cm", "m", "km", "inch", "foot", "yard", "mile"]
+    return str(sumRom()) + " " + unit_array[xshade.scene().unit]
 
-main()
+result = main()
