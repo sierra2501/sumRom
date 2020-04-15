@@ -1,13 +1,37 @@
-#sr-container{
+#sh-wd-wrapper{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 350px;
+  height: 180px;
+  margin: 10px auto;
 }
-#sr-left{
-  width: 85px;
+#sh-wd-header{
+  display: table;
+  width: 100%;
+  height: 40px;
+  padding-bottom: 10px;
 }
-#sr-right{
+#sh-wd-main{
   flex: 1;
-  height: auto;
-  padding-left: 5px;
-  border: 1px solid;
+  width: 100%;
+  padding-bottom: 10px;
+}
+#sh-wd-footer{
+  display: table;
+  width: 100%;
+  height: 20px;
+  padding-bottom: 10px;
+  text-align: right;
+}
+
+#sh-wd-form{
+  padding-bottom: 10px;
+}
+#sh-wd-form input{
+  width: 100px;
+}
+
+#sh-wd-result{
+  width: 100%;
+  border-bottom: 1px solid #555555;
 }
